@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #091921;
+  overflow: hidden;
+}
+
+body.light {
+  background: #d1dae3;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h1 {
+  color: #f0f0f0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+body.light h1 {
+  color: #333;
+}
+
+.heart-icon {
+  color: gray;
+  margin-left: 10px;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.heart-icon:hover {
+  color: pink;
+}
+
+.heart-icon:active {
+  color: red;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #091921 url(https://i.imgur.com/4vCk1uy.png);
+  background-size: cover;
+  margin-left: 500px;
+  margin-top: 30px;
+  z-index: 1;
+  border: 4px solid #091921;
+  border-radius: 50%;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+    20px 20px 20px rgba(0, 0, 0, 0.3),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+    inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.made {
+  color: #f0f0f0;
+  opacity: 0.7;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.made a {
+  color: #f0f0f0;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+body.light .made {
+  color: #333;
+}
+
+.made a:hover {
+  color: #00ffab;
+  opacity: 0.7;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 500;
+}
+
+body.light a {
+  color: #333;
+  opacity: 1;
+}
+
+body.light a:hover {
+    color: #0B666A;
+}
+
+body.light .clock {
+  background: #d1dae3 url(https://i.imgur.com/bJOf8Ww.png);
+  background-size: cover;
+  border: 4px solid #cad3dc;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 10px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+body.light .clock::before {
+  background: #008eff;
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+}
+
+.hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+
+.min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+.sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  /* 	align-items:center; */
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ff105e;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #fff;
+  z-index: 11;
+  border-radius: 6px;
+}
+
+body.light .mn::before {
+  background: #091921;
+}
+
+.sc::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #3d61ff;
+  z-index: 12;
+  border-radius: 6px;
+}
+
+.toggle {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  color: #d1dae3;
+  font-family: consolas;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "Light Mode";
+  left: 25px;
+  white-space: nowrap;
+}
+
+body.light .toggle {
+  background: #091921;
+  color: #091921;
+}
+
+body.light .toggle:before {
+  content: "Dark Mode";
+  white-space: nowrap;
+}
