@@ -65,7 +65,7 @@ body.light h1 {
   align-items: center;
   background: #091921 url(https://i.imgur.com/4vCk1uy.png);
   background-size: cover;
-  margin-left: 500px;
+  margin-left: 600px;
   margin-top: 30px;
   z-index: 1;
   border: 4px solid #091921;
@@ -235,4 +235,38 @@ body.light .toggle {
 body.light .toggle:before {
   content: "Dark Mode";
   white-space: nowrap;
+}
+
+@media screen and (max-width: 560px) {
+  /* Mengatur kontainer untuk tampilan responsif */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Mengatur jarak atas untuk elemen .made pada tampilan responsif */
+  .made {
+    margin-top: 10px;
+  }
+
+  /* Mengatur jarak atas dan margin kanan untuk elemen .toggle pada tampilan responsif */
+  .toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Mengubah ukuran teks elemen h1 pada tampilan responsif */
+  h1 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  /* Mengubah ukuran elemen .clock pada tampilan responsif */
+  .clock {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+  }
 }
