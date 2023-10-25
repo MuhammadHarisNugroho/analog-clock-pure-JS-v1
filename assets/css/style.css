@@ -253,8 +253,8 @@ body.light .toggle:before {
   /* Mengatur jarak atas dan margin kanan untuk elemen .toggle pada tampilan responsif */
   .toggle {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 40px;
+    right: 120px;
   }
 
   /* Mengubah ukuran teks elemen h1 pada tampilan responsif */
